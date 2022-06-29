@@ -1,0 +1,170 @@
+@import "./config";
+
+
+.main{
+    padding: 1.5em;
+    margin: 0 auto;
+    max-width: 500px;
+    @include mediaQWidth(1000px){
+        max-width: 1440px;
+        padding: 1.5em 4em;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.image-container{
+    position: relative;
+    padding: 9% 11%;
+    // max-width: 500px;
+
+    @include mediaQWidth(1000px){
+        flex: 1 1 50%;
+        padding: 3.5em;
+        // border: 1px solid red;
+        max-width: 600px;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url("../images/pattern-bg.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: 10;
+    }
+
+    &__wraper{
+        position: relative;
+        border-radius: 6px;
+        box-shadow: 0 20px 30px 10px rgba($grayish-blue, 0.25);
+        z-index: 20;
+        // border: 1px solid green;
+        max-width: 470px;
+    }
+
+    .avatar{
+        border-radius: 6px;
+    }
+
+    .control{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80px;
+        border-radius: 30px;
+        background-color: rgb(255, 255, 255);
+        filter: drop-shadow(-5px 20px 10px rgba($grayish-blue, 0.5));
+        overflow: hidden;
+        transform: translate(-50%, 50%);
+        z-index: 30;
+        @include mediaQWidth(1000px){
+            left: 10%;
+            transform: translate(0, 50%);
+        }
+    }
+
+    .right-arrow, .left-arrow{
+        flex: 1 1 45%;
+        padding: 0.65em 0.75em;
+        cursor: pointer;
+    }
+
+    .left-arrow img, .right-arrow img{
+        width: 12px;
+    } 
+
+    .right-arrow img{
+        transform: rotate(180deg);
+        margin-left: auto;
+    }
+
+}
+
+.text-container{
+    margin: 2em 0 1em 0;
+    text-align: center;
+   
+    @include mediaQWidth(1000px){
+        flex: 1 1 50%;
+        max-width: 650px;
+        position: relative;
+        left: 10%;
+        // border: 1px solid blue;
+        text-align: left;
+        z-index: 100;
+    }
+    @include mediaQWidth(1400px){
+        left: 15%;
+    }
+    
+    .testimonial{
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $dark-blue;
+        line-height: 1.4;
+        margin: 3em 0 1em 0;
+        @include mediaQWidth(1000px){
+            font-size: 2rem;
+            font-size: clamp(1.5rem, 2.2vw, 2rem);
+            max-width: 1000px;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            transform: translate(-50%, -39%);
+            background-image: url("../images/pattern-quotes.svg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            @include mediaQWidth(1000px){
+                width: 90px;
+                height: 90px;
+                left: 15%;
+                transform: translate(0, -45%);
+            }
+        }
+    }
+
+    .personal-info{
+        @include mediaQWidth(1000px){
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+        }
+    }
+
+    .name{
+        color: $dark-blue;
+        font-weight: 700;
+        font-size: 1.05rem;
+        margin-bottom: 0.2em;
+        @include mediaQWidth(1000px){
+            margin-bottom: 0;
+            font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+        }
+    }
+    .position{
+        color: $grayish-blue;
+    }
+}
+
+.footer{
+    margin-top: auto;
+}

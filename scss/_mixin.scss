@@ -1,0 +1,5 @@
+@mixin mediaQWidth($minWidth){
+    @media(min-width: $minWidth){
+        @content;
+    }
+}
