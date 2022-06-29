@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-p {
+p, h1 {
   font-family: 'Inter', sans-serif;
 }
 
@@ -152,19 +152,8 @@ body {
 
 .text-container .testimonial {
   position: relative;
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #202046;
-  line-height: 1.4;
   margin: 3em 0 1em 0;
-}
-
-@media (min-width: 1000px) {
-  .text-container .testimonial {
-    font-size: 2rem;
-    font-size: clamp(1.5rem, 2.2vw, 2rem);
-    max-width: 1000px;
-  }
+  max-width: 1000px;
 }
 
 .text-container .testimonial::after {
@@ -186,6 +175,20 @@ body {
     height: 90px;
     left: 15%;
     transform: translate(0, -45%);
+  }
+}
+
+.text-container h1 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #202046;
+  line-height: 1.4;
+}
+
+@media (min-width: 1000px) {
+  .text-container h1 {
+    font-size: 2rem;
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
   }
 }
 
