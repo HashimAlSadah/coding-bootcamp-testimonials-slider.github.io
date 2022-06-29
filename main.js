@@ -2,7 +2,7 @@
 const nextBtn = document.querySelector(".right-arrow");
 const prevBtn = document.querySelector(".left-arrow");
 const avatar = document.querySelector(".avatar");
-const testimonial = document.querySelector(".testimonial p")
+const testimonial = document.querySelector(".testimonial h1")
 const personName = document.querySelector(".name");
 const position = document.querySelector(".position");
 let index = 0;
